@@ -1,0 +1,50 @@
+{
+  "type": "record",
+  "name": "BusTransaction",
+  "namespace": "id.transport.smartcard",
+  "doc": "Smart card tap-in/tap-out event dari reader kartu di dalam bus",
+  "fields": [
+    {
+      "name": "transaction_id",
+      "type": "string",
+      "doc": "UUID unik per event transaksi"
+    },
+    {
+      "name": "card_id",
+      "type": "string",
+      "doc": "ID kartu penumpang (C001 - C100)"
+    },
+    {
+      "name": "bus_id",
+      "type": "string",
+      "doc": "ID bus (BUS-01, BUS-02, BUS-03)"
+    },
+    {
+      "name": "event_type",
+      "type": {
+        "type": "enum",
+        "name": "EventType",
+        "symbols": ["tap_in", "tap_out"]
+      },
+      "doc": "Jenis event: tap_in saat naik, tap_out saat turun"
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Waktu transaksi dalam Unix timestamp milliseconds"
+    },
+    {
+      "name": "latitude",
+      "type": "double",
+      "doc": "Koordinat lintang posisi bus saat transaksi"
+    },
+    {
+      "name": "longitude",
+      "type": "double",
+      "doc": "Koordinat bujur posisi bus saat transaksi"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# Environment
+config/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Spark checkpoints
+/tmp/spark-checkpoints/
+spark-warehouse/
+
+# Kafka logs
+kafka-logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ga penting
+/consumer/
+
+/db/
+/docker/hdfs/
+/docker/submit_spark.sh
+
+Readme.md
+requirements.txt
