@@ -26,7 +26,7 @@ realtime-bus-transactions/
 │   │   ├── setup_topic.py           ← Buat Kafka topic + register Avro schema 
 │   │   └── producer.py              ← Kirim event ke Kafka
 │   └── spark/
-│       └── spark_streaming.py       ← PySpark job (dijalankan VIA Docker, bukan submit_spark)
+│       └── spark_streaming.py       ← PySpark job (dijalankan VIA Docker, pakai submit_spark)
 │
 ├── config/
 │   └── .env                         ← Ga gw masukin github sorry
@@ -35,3 +35,9 @@ realtime-bus-transactions/
 ```
 ## Link dokumentasi tambahan dan penjelasan singkat projek
 https://docs.google.com/presentation/d/1H7mT8G3gNuvcaZcc9fQzJ--ERehL-bBzgTsPzm760Tk/edit?usp=sharing
+
+## Langkah
+1. docker compose-up //jalanin docker
+2. python app/producer/setup_topic.py //buat topic
+3. python app/producer/producer.py //prodcer jalan
+4. powershell -ExecutionPolicy Bypass -File .\docker\submit_spark.ps1 //consume jalan
