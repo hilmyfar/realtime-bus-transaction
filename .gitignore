@@ -24,7 +24,7 @@ kafka-logs/
 Thumbs.db
 
 # Ga penting
-/consumer/
+app/consumer/
 
 /db/
 /docker/hdfs/
