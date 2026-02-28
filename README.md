@@ -12,9 +12,9 @@ realtime-bus-transactions/
 │       ├── namenode/
 │       └── datanode/
 │
-├── db/                              ← SQL untuk database Neon
-│   ├── schema.sql                   ← DDL: tabel + materialized views (jalankan pertama)
-│   └── geofencing.sql               ← Snap koordinat ke halte terdekat
+├── db/                              ← SQL untuk database Neon 
+│   ├── schema.sql                   ← DDL: tabel + materialized views (Ga sempet masukin sini, ada di PPT)
+│   └── trigger.sql                  ← Ga sempet masukin sini, ada di PPT
 │
 ├── schema/
 │   └── bus_transaction.avsc         ← Avro schema untuk Kafka message
@@ -33,3 +33,5 @@ realtime-bus-transactions/
 │
 └── README.md
 ```
+## Link dokumentasi tambahan dan penjelasan singkat projek
+https://docs.google.com/presentation/d/1H7mT8G3gNuvcaZcc9fQzJ--ERehL-bBzgTsPzm760Tk/edit?usp=sharing
